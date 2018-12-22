@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<title>Print Array value every 2 seconds</title>
+
+<body>
+<h3> A program which loops through Array and prints each value every 2 seconds </h3>
+<br/>
+<textarea id="txtArr" rows="7" ></textarea>
+
+<script language="javascript">
+
+var arr=['aaa','bbb','ccc','ddd','eee','fff'];
+var i=0;
+
+function displayArr() {
+   
+   
+	document.getElementById("txtArr").value= document.getElementById("txtArr").value + '\n' + arr[i];
+    i++;
+    if (i==(arr.length))
+    {
+    return;
+    }
+    setTimeout(displayArr, 2000); // callback
+    
+}
+document.getElementById("txtArr").value='';
+displayArr();
+</script>
+
+
+
+</body>
+</html>
